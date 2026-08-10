@@ -3,8 +3,7 @@ import type { GameData } from "@/lib/games";
 import type { Locale } from "@/i18n/messages";
 import { t } from "@/i18n/messages";
 import { ArrowUpRight, CheckCircle2, Shield, Sparkles } from "lucide-react";
-import EarthLottie from "@/components/ui/EarthLottie";
-import WBYAnimation from "@/components/ui/WBYAnimation";
+import GameVisual from "@/components/ui/GameVisual";
 import { withBasePath } from "../../lib/basePath";
 
 interface GameCardProps {
@@ -22,13 +21,6 @@ export default function GameCard({ game, locale }: GameCardProps) {
         "--color-accent-ink": game.theme.accentInk,
       } as React.CSSProperties)
     : {};
-
-  const visual =
-    game.slug === "globetrot" ? (
-      <EarthLottie />
-    ) : game.slug === "wby" ? (
-      <WBYAnimation />
-    ) : null;
 
   return (
     <article
@@ -53,7 +45,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
         </div>
       ) : (
         <div className="flex items-center justify-center rounded-t-[0.9rem] bg-[var(--color-accent-dim)] py-10">
-          <div className="h-36 w-36">{visual}</div>
+          <div className="h-36 w-36"><GameVisual game={game} /></div>
         </div>
       )}
 
@@ -63,7 +55,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
         {/* Icon + name + meta row */}
         <div className="mb-6 flex items-start gap-4">
           <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-zinc-950/10 bg-[var(--color-accent-dim)]">
-            {visual}
+            <GameVisual game={game} />
           </div>
 
           <div className="flex-1">

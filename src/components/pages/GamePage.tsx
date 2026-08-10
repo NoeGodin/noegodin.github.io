@@ -2,8 +2,7 @@ import Link from "next/link";
 import type { GameData } from "@/lib/games";
 import { t, type Locale } from "@/i18n/messages";
 import { withBasePath } from "@/lib/basePath";
-import EarthLottie from "@/components/ui/EarthLottie";
-import WBYAnimation from "@/components/ui/WBYAnimation";
+import GameVisual from "@/components/ui/GameVisual";
 import { ArrowLeft, CheckCircle2, Shield, Sparkles } from "lucide-react";
 
 interface GamePageProps {
@@ -21,13 +20,6 @@ export default function GamePage({ game, locale }: GamePageProps) {
         "--color-accent-ink": game.theme.accentInk,
       } as React.CSSProperties)
     : {};
-
-  const visual =
-    game.slug === "globetrot" ? (
-      <EarthLottie />
-    ) : game.slug === "wby" ? (
-      <WBYAnimation />
-    ) : null;
 
   return (
     <div style={themeStyle}>
@@ -74,7 +66,7 @@ export default function GamePage({ game, locale }: GamePageProps) {
             </div>
 
             <div className="h-40 w-40 shrink-0 overflow-hidden rounded-2xl border border-zinc-950/10 bg-[var(--color-accent-dim)] shadow-[0_22px_70px_rgba(9,9,11,0.12)] sm:h-48 sm:w-48">
-              {visual}
+              <GameVisual game={game} />
             </div>
           </div>
         </div>

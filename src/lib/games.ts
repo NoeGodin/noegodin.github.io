@@ -15,6 +15,8 @@ interface GameData {
   readonly privacyPath: string;
   readonly gamePath: string;
   readonly presentationImage?: string;
+  /** Icône carrée, utilisée comme visuel quand le jeu n'a pas d'animation dédiée. */
+  readonly iconImage?: string;
   readonly theme?: GameTheme;
   readonly privacyPolicy?: PrivacyPolicy;
 }
@@ -133,6 +135,126 @@ const GAMES: readonly GameData[] = [
             {
               type: "paragraph",
               text: "GlobeTrot does not knowingly collect personal information from children under 13. The app does not require personal data to function.",
+            },
+          ],
+        },
+        {
+          title: "Changes to This Policy",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "We may update this policy from time to time. Changes will be reflected on this page with an updated revision date.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "pixel-gun-gambler",
+    name: "Pixel Gun Gambler",
+    tagline: "Ouvre des caisses, collectionne les armes, tente ta chance",
+    description:
+      "Pixel Gun Gambler est un simulateur d'ouverture de caisses en pixel art. Ouvre des caisses pour décrocher des armes de plus en plus rares, améliore tes exemplaires, complète ta collection et fais tourner les jeux du casino — le tout avec une monnaie 100 % virtuelle. Aucun argent réel, aucun compte, aucune connexion : tout se joue hors ligne, sur ton appareil.",
+    features: [
+      "Ouverture de caisses — roulette, usure et raretés",
+      "Arsenal — améliore chaque arme, débloque ses skins",
+      "Upgrader — mise une arme contre cinq offres",
+      "Farm AFK — tes cinq meilleures armes rapportent",
+      "Collection — des lots à compléter, des paliers à réclamer",
+      "Casino — mines, plinko, crash et jackpot d'armes",
+    ],
+    platforms: [
+      {
+        name: "android",
+        label: "Google Play",
+        url: "#",
+      },
+    ],
+    status: "released",
+    privacyPath: "/privacy/pixel-gun-gambler",
+    gamePath: "/games/pixel-gun-gambler",
+    iconImage: "/games/pixel-gun-gambler/icon.png",
+    theme: {
+      accent: "#D69A1E",
+      accentDim: "#FCF3DC",
+      accentInk: "#4A3505",
+    },
+    privacyPolicy: {
+      lastUpdated: "August 2026",
+      sections: [
+        {
+          title: "Overview",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pixel Gun Gambler is a pixel-art case-opening game developed by NODIN Studio. The app runs entirely offline and collects no personal data. This policy explains what that means in practice.",
+            },
+          ],
+        },
+        {
+          title: "No Data Collected",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pixel Gun Gambler collects no personal information whatsoever. The app requests no Android permissions — it has no internet access — so no name, email address, location, contact, advertising identifier, or device identifier is collected, and nothing is ever sent to NODIN Studio or to any server.",
+            },
+          ],
+        },
+        {
+          title: "Data Stored on Your Device",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Your progress is saved in a local file on your device, and never leaves it. It contains only gameplay state:",
+            },
+            {
+              type: "list",
+              items: [
+                "Virtual balance and player level.",
+                "Weapon inventory — rarity, wear, upgrade level and equipped skin of each item.",
+                "Progression — cases opened, collection milestones claimed, AFK farm state.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "Uninstalling the app deletes this file and all of your progress. There is no cloud save and no way to recover it.",
+            },
+          ],
+        },
+        {
+          title: "No Account Required",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pixel Gun Gambler does not require you to create an account or sign in. No login, no profile, no registration of any kind.",
+            },
+          ],
+        },
+        {
+          title: "No Ads, No Analytics, No Purchases",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "The app contains no advertising network, no analytics SDK, no crash reporting and no tracking library. It offers no in-app purchases, so no payment information is ever handled. No data is shared or sold to third parties, because no data is collected in the first place.",
+            },
+          ],
+        },
+        {
+          title: "Simulated Gambling, Virtual Currency Only",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Case openings and casino modes are simulations played with in-game currency that has no monetary value. Nothing can be bought with real money, and in-game currency and items cannot be cashed out, traded or exchanged for anything of real-world value. The game is intended as entertainment and does not offer an opportunity to win real money or prizes.",
+            },
+          ],
+        },
+        {
+          title: "Children's Privacy",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pixel Gun Gambler does not knowingly collect personal information from children under 13, and does not collect personal information from anyone. Note that the game features simulated gambling themes and is intended for a mature audience.",
             },
           ],
         },
