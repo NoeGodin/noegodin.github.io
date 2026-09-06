@@ -35,11 +35,22 @@ export default function GameCard({ game, locale }: GameCardProps) {
 
       {/* ── Visual header — preserves native aspect ratio ── */}
       {game.presentationImage ? (
-        <div className="overflow-hidden rounded-t-[0.9rem]">
+        <div
+          className="overflow-hidden rounded-t-[0.9rem]"
+          style={
+            game.presentationBackground
+              ? { background: game.presentationBackground }
+              : undefined
+          }
+        >
           <img
             src={withBasePath(game.presentationImage)}
             alt={`${game.name} screenshot`}
-            className="h-52 w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            className={`h-52 w-full transition-transform duration-500 group-hover:scale-[1.02] ${
+              game.presentationFit === "contain"
+                ? "object-contain object-center"
+                : "object-cover object-top"
+            }`}
             loading="lazy"
           />
         </div>

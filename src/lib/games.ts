@@ -15,6 +15,15 @@ interface GameData {
   readonly privacyPath: string;
   readonly gamePath: string;
   readonly presentationImage?: string;
+  /**
+   * Cadrage de `presentationImage`. « cover » recadre pour remplir la tuile
+   * (capture d'écran, dont on peut couper les bords) ; « contain » montre
+   * l'image ENTIÈRE sur `presentationBackground` (bannière composée, dont
+   * couper un bord détruirait le titre).
+   */
+  readonly presentationFit?: "cover" | "contain";
+  /** Fond posé derrière une image « contain ». Prolonge son propre fond. */
+  readonly presentationBackground?: string;
   /** Icône carrée, utilisée comme visuel quand le jeu n'a pas d'animation dédiée. */
   readonly iconImage?: string;
   readonly theme?: GameTheme;
@@ -175,6 +184,9 @@ const GAMES: readonly GameData[] = [
     status: "released",
     privacyPath: "/privacy/pixel-arsenal",
     gamePath: "/games/pixel-arsenal",
+    presentationImage: "/games/pixel_arsenal_presentation.png",
+    presentationFit: "contain",
+    presentationBackground: "#12101A",
     iconImage: "/games/pixel-arsenal/icon.png",
     theme: {
       accent: "#D69A1E",
