@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GamePage from "@/components/pages/GamePage";
 import GlobeTrotPage from "@/components/pages/GlobeTrotPage";
+import PixelArsenalPage from "@/components/pages/PixelArsenalPage";
 import { getAllGames, getGameBySlug } from "@/lib/games";
 
 interface GamePageParams {
@@ -38,6 +39,10 @@ export default async function GameRoute({ params }: GamePageParams) {
 
   if (game.slug === "globetrot") {
     return <GlobeTrotPage game={game} locale="fr" />;
+  }
+
+  if (game.slug === "pixel-arsenal") {
+    return <PixelArsenalPage game={game} locale="fr" />;
   }
 
   return <GamePage game={game} locale="fr" />;

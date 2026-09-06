@@ -20,7 +20,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "NODIN Studio -- Mobile Games",
   description:
-    "NODIN Studio is an independent mobile game studio crafting thoughtful, rewarding experiences. Play GlobeTrot and explore the world through geography challenges.",
+    "NODIN Studio is an independent mobile game studio crafting thoughtful, rewarding experiences. Play GlobeTrot and Pixel Arsenal on Android.",
   openGraph: {
     title: "NODIN Studio",
     description:

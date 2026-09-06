@@ -151,18 +151,19 @@ const GAMES: readonly GameData[] = [
     },
   },
   {
-    slug: "pixel-gun-gambler",
-    name: "Pixel Gun Gambler",
-    tagline: "Ouvre des caisses, collectionne les armes, tente ta chance",
+    slug: "pixel-arsenal",
+    name: "Pixel Arsenal",
+    tagline: "Ouvre des caisses, forge ton arsenal, tente ta chance",
     description:
-      "Pixel Gun Gambler est un simulateur d'ouverture de caisses en pixel art. Ouvre des caisses pour décrocher des armes de plus en plus rares, améliore tes exemplaires, complète ta collection et fais tourner les jeux du casino — le tout avec une monnaie 100 % virtuelle. Aucun argent réel, aucun compte, aucune connexion : tout se joue hors ligne, sur ton appareil.",
+      "Pixel Arsenal est un simulateur d'ouverture de caisses en pixel art. Chaque caisse fait tourner une roulette d'armes, huit raretés et cinq états d'usure : de la commune grise à l'interdite cyan, tirée une fois sur quatre cents. Fusionne tes doublons en armes étoilées, mise à l'upgrader, échange cinq armes contre une du palier au-dessus au contrat, laisse ton arsenal farmer hors ligne, et tente les tables du casino \u2014 mines, plinko, crash, jackpot. Le tout en monnaie virtuelle : rien ne s'encaisse, rien ne se revend.",
     features: [
-      "Ouverture de caisses — roulette, usure et raretés",
-      "Arsenal — améliore chaque arme, débloque ses skins",
-      "Upgrader — mise une arme contre cinq offres",
-      "Farm AFK — tes cinq meilleures armes rapportent",
-      "Collection — des lots à compléter, des paliers à réclamer",
-      "Casino — mines, plinko, crash et jackpot d'armes",
+      "Caisses \u2014 roulette, usure et huit raretés",
+      "Fusion \u2014 des doublons aux armes étoilées",
+      "Upgrader \u2014 mise une arme contre cinq offres",
+      "Contrat \u2014 cinq armes pour une du palier au-dessus",
+      "Farm AFK \u2014 tes cinq meilleures armes rapportent hors ligne",
+      "Casino \u2014 mines, plinko, crash et jackpot d'armes",
+      "Prestige \u2014 tout recommencer, en beaucoup plus fort",
     ],
     platforms: [
       {
@@ -172,32 +173,32 @@ const GAMES: readonly GameData[] = [
       },
     ],
     status: "released",
-    privacyPath: "/privacy/pixel-gun-gambler",
-    gamePath: "/games/pixel-gun-gambler",
-    iconImage: "/games/pixel-gun-gambler/icon.png",
+    privacyPath: "/privacy/pixel-arsenal",
+    gamePath: "/games/pixel-arsenal",
+    iconImage: "/games/pixel-arsenal/icon.png",
     theme: {
       accent: "#D69A1E",
       accentDim: "#FCF3DC",
       accentInk: "#4A3505",
     },
     privacyPolicy: {
-      lastUpdated: "August 2026",
+      lastUpdated: "September 2026",
       sections: [
         {
           title: "Overview",
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Gun Gambler is a pixel-art case-opening game developed by NODIN Studio. The app runs entirely offline and collects no personal data. This policy explains what that means in practice.",
+              text: "Pixel Arsenal is a pixel-art case-opening game developed by NODIN Studio. The game was released under the name Pixel Gun Gambler until August 2026. This policy explains what data the app handles, who it is shared with, and the choices you have.",
             },
           ],
         },
         {
-          title: "No Data Collected",
+          title: "No Account, No Personal Data Collected By Us",
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Gun Gambler collects no personal information whatsoever. The app requests no Android permissions — it has no internet access — so no name, email address, location, contact, advertising identifier, or device identifier is collected, and nothing is ever sent to NODIN Studio or to any server.",
+              text: "Pixel Arsenal does not require you to create an account or sign in to play. NODIN Studio operates no server and no database: we never receive your name, email address, postal address, phone number or location, and we hold no profile about you. The third-party services described below are the only parties that process data, each under its own policy.",
             },
           ],
         },
@@ -206,37 +207,71 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Your progress is saved in a local file on your device, and never leaves it. It contains only gameplay state:",
+              text: "Your progress is saved in a local file on your device. It contains only gameplay state:",
             },
             {
               type: "list",
               items: [
-                "Virtual balance and player level.",
-                "Weapon inventory — rarity, wear, upgrade level and equipped skin of each item.",
-                "Progression — cases opened, collection milestones claimed, AFK farm state.",
+                "Virtual balance, diamonds, player power and prestige level.",
+                "Weapon inventory \u2014 rarity, wear, upgrade level, fusion stars and equipped skin of each item.",
+                "Progression \u2014 cases opened, collection milestones claimed, AFK farm state, purchases made.",
               ],
             },
             {
               type: "paragraph",
-              text: "Uninstalling the app deletes this file and all of your progress. There is no cloud save and no way to recover it.",
+              text: "Uninstalling the app deletes this file. If you enabled cloud save, a copy remains in your own Google Play Games storage until you delete it there.",
             },
           ],
         },
         {
-          title: "No Account Required",
+          title: "Advertising (Google AdMob)",
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Gun Gambler does not require you to create an account or sign in. No login, no profile, no registration of any kind.",
+              text: "Pixel Arsenal shows ads served by Google AdMob: full-screen ads between case openings, and optional rewarded ads that you choose to watch in exchange for an in-game bonus. Watching a rewarded ad is always your decision \u2014 nothing in the game is locked behind one.",
+            },
+            {
+              type: "paragraph",
+              text: "To serve those ads, Google may access your device's advertising identifier, approximate location derived from your IP address, and information about your device and ad interactions. Google acts as an independent controller for this processing; see the Google Privacy Policy and 'How Google uses information from sites or apps that use our services'.",
+            },
+            {
+              type: "paragraph",
+              text: "In the European Economic Area, the United Kingdom and Switzerland, a consent form is shown before any personalised ad is requested, through Google's User Messaging Platform. You can reopen it at any time from the in-game settings to change or withdraw your choice. You can also reset or delete your advertising identifier in your device's Android settings.",
+            },
+            {
+              type: "paragraph",
+              text: "Buying anything in the in-game store permanently removes all advertising from the app.",
             },
           ],
         },
         {
-          title: "No Ads, No Analytics, No Purchases",
+          title: "In-App Purchases (RevenueCat, Google Play, App Store)",
           blocks: [
             {
               type: "paragraph",
-              text: "The app contains no advertising network, no analytics SDK, no crash reporting and no tracking library. It offers no in-app purchases, so no payment information is ever handled. No data is shared or sold to third parties, because no data is collected in the first place.",
+              text: "The store sells diamond packs and a one-time unlimited-boosters product. Payment is handled entirely by Google Play or the Apple App Store; NODIN Studio never sees or stores your payment details.",
+            },
+            {
+              type: "paragraph",
+              text: "Purchase validation goes through RevenueCat, which receives an anonymous app-user identifier, your purchase receipts and basic device and country information in order to tell the game what you own. It is not linked to your name or email address. See the RevenueCat Privacy Policy.",
+            },
+          ],
+        },
+        {
+          title: "Cloud Save (Google Play Games Services)",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Cloud save is optional and off until you sign in. When enabled, the encrypted save file is stored in your own Google Play Games saved-games space, under your Google account and subject to Google's privacy policy. NODIN Studio has no access to it. Signing out or playing offline changes nothing about the game itself \u2014 the local save always remains the source of truth.",
+            },
+          ],
+        },
+        {
+          title: "No Analytics, No Tracking Beyond Ads",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Pixel Arsenal embeds no analytics SDK, no crash reporting and no social network SDK. Apart from the advertising, purchase and cloud-save services listed above, no data leaves your device, and nothing is ever sold to data brokers.",
             },
           ],
         },
@@ -245,7 +280,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Case openings and casino modes are simulations played with in-game currency that has no monetary value. Nothing can be bought with real money, and in-game currency and items cannot be cashed out, traded or exchanged for anything of real-world value. The game is intended as entertainment and does not offer an opportunity to win real money or prizes.",
+              text: "Case openings and casino modes are simulations played with in-game currency that has no monetary value. In-game currency and items cannot be cashed out, traded or exchanged for anything of real-world value, and no purchase gives an opportunity to win real money or prizes. The game is entertainment, not gambling.",
             },
           ],
         },
@@ -254,7 +289,16 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Gun Gambler does not knowingly collect personal information from children under 13, and does not collect personal information from anyone. Note that the game features simulated gambling themes and is intended for a mature audience.",
+              text: "Pixel Arsenal features simulated gambling themes, in-app purchases and advertising. It is intended for a mature audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
+            },
+          ],
+        },
+        {
+          title: "Your Rights and Contact",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Because we hold no personal data about you, there is nothing on our side to access, correct or delete. To act on data held by the services above, use their own controls: Google Play Games saved games for your cloud save, your device's Android ad settings and the in-game consent form for advertising, and your Google Play or App Store account for purchases. For anything else, contact NODIN Studio through the address listed in the site footer.",
             },
           ],
         },

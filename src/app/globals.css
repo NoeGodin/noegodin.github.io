@@ -53,3 +53,46 @@ body {
   background: rgba(9, 9, 11, 0.12);
   color: #09090b;
 }
+
+/* ── Pixel Arsenal : la bande de roulette ──────────────────────────────
+   Le pool est rendu QUATRE fois et la bande translate de -50 % : elle
+   reboucle donc exactement sur elle-même, sans saut visible. Seul
+   `transform` est animé (le compositeur suffit, aucun reflow). */
+.pa-reel {
+  width: max-content;
+  animation: pa-reel-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+@keyframes pa-reel-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Les bords s'estompent : la bande n'a ni début ni fin visibles. */
+.pa-reel-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pa-reel {
+    animation: none;
+  }
+}
