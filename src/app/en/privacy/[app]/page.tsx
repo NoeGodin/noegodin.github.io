@@ -19,12 +19,12 @@ export async function generateMetadata({
 
   if (!game) {
     return {
-      title: "Privacy Policy -- NODIN Studio",
+      title: "Privacy Policy | NODIN Studio",
     };
   }
 
   return {
-    title: `${game.name} Privacy Policy -- NODIN Studio`,
+    title: `${game.name} Privacy Policy | NODIN Studio`,
     description: `Privacy policy for ${game.name} by NODIN Studio.`,
   };
 }

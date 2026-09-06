@@ -62,13 +62,13 @@ const GAMES: readonly GameData[] = [
     name: "GlobeTrot",
     tagline: "Testez vos connaissances en géographie mondiale",
     description:
-      "GlobeTrot transforme la géographie en jeu de découverte. Place les pays sur une vraie carte du monde, reconnais les drapeaux, les capitales et les devises, et explore les régions et villes de chaque pays. Un Défi Quotidien, un mode Voyage par frontières terrestres, des thèmes de carte à débloquer en jouant en Expert -- pour les curieux du globe.",
+      "GlobeTrot transforme la géographie en jeu de découverte. Place les pays sur une vraie carte du monde, reconnais les drapeaux, les capitales et les devises, et explore les régions et villes de chaque pays. Un Défi Quotidien, un mode Voyage par frontières terrestres, des thèmes de carte à débloquer en jouant en Expert, pour les curieux du globe.",
     features: [
-      "Placer le pays -- sur la carte du monde",
+      "Placer le pays sur la carte du monde",
       "Trouver par drapeau, capitale ou devise",
-      "Mode Voyage -- traverse les frontières d'un pays à l'autre",
-      "Carte Interactive -- explore régions et villes par pays",
-      "Défi Quotidien -- une nouvelle partie chaque jour",
+      "Mode Voyage : traverse les frontières d'un pays à l'autre",
+      "Carte Interactive : explore régions et villes par pays",
+      "Défi Quotidien : une nouvelle partie chaque jour",
       "Mode Infini + thèmes de carte à débloquer",
     ],
     platforms: [
@@ -104,9 +104,9 @@ const GAMES: readonly GameData[] = [
             {
               type: "list",
               items: [
-                "Game progress — your campaign advancement, scores, unlocked regions, and completed challenges.",
-                "Coins and Wonders — in-game currency and collectible items earned through gameplay.",
-                "Device language — used to display the app in your preferred language.",
+                "Game progress: your campaign advancement, scores, unlocked regions, and completed challenges.",
+                "Coins and Wonders: in-game currency and collectible items earned through gameplay.",
+                "Device language: used to display the app in your preferred language.",
               ],
             },
           ],
@@ -116,7 +116,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Game progress may be synced using Apple Game Center on iOS and Google Play Games on Android (depending on your device and settings). These services are managed by Apple and Google respectively. No separate account is required to use GlobeTrot — your platform account handles authentication and cloud saves.",
+              text: "Game progress may be synced using Apple Game Center on iOS and Google Play Games on Android (depending on your device and settings). These services are managed by Apple and Google respectively. No separate account is required to use GlobeTrot. Your platform account handles authentication and cloud saves.",
             },
           ],
         },
@@ -162,17 +162,16 @@ const GAMES: readonly GameData[] = [
   {
     slug: "pixel-arsenal",
     name: "Pixel Arsenal",
-    tagline: "Ouvre des caisses, forge ton arsenal, tente ta chance",
+    tagline: "Ouvre des caisses, monte ton arsenal, tente ta chance",
     description:
-      "Pixel Arsenal est un simulateur d'ouverture de caisses en pixel art. Chaque caisse fait tourner une roulette d'armes, huit raretés et cinq états d'usure : de la commune grise à l'interdite cyan, tirée une fois sur quatre cents. Fusionne tes doublons en armes étoilées, mise à l'upgrader, échange cinq armes contre une du palier au-dessus au contrat, laisse ton arsenal farmer hors ligne, et tente les tables du casino \u2014 mines, plinko, crash, jackpot. Le tout en monnaie virtuelle : rien ne s'encaisse, rien ne se revend.",
+      "Pixel Arsenal est un jeu d'ouverture de caisses en pixel art. Ouvre, garde ce qui te plaît, revends le reste. Améliore tes armes préférées, fusionne tes doublons, remplis ta collection et tente les tables du casino. Monnaie du jeu uniquement : rien ne s'encaisse.",
     features: [
-      "Caisses \u2014 roulette, usure et huit raretés",
-      "Fusion \u2014 des doublons aux armes étoilées",
-      "Upgrader \u2014 mise une arme contre cinq offres",
-      "Contrat \u2014 cinq armes pour une du palier au-dessus",
-      "Farm AFK \u2014 tes cinq meilleures armes rapportent hors ligne",
-      "Casino \u2014 mines, plinko, crash et jackpot d'armes",
-      "Prestige \u2014 tout recommencer, en beaucoup plus fort",
+      "Douze caisses à débloquer",
+      "Une caisse gratuite chaque jour",
+      "Collection d'armes à compléter",
+      "Upgrader, contrat et fusion",
+      "Casino : mines, plinko, crash, jackpot",
+      "Farm hors ligne",
     ],
     platforms: [
       {
@@ -225,8 +224,8 @@ const GAMES: readonly GameData[] = [
               type: "list",
               items: [
                 "Virtual balance, diamonds, player power and prestige level.",
-                "Weapon inventory \u2014 rarity, wear, upgrade level, fusion stars and equipped skin of each item.",
-                "Progression \u2014 cases opened, collection milestones claimed, AFK farm state, purchases made.",
+                "Weapon inventory: rarity, wear, upgrade level, fusion stars and equipped skin of each item.",
+                "Progression: cases opened, collection milestones claimed, AFK farm state, purchases made.",
               ],
             },
             {
@@ -240,7 +239,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Arsenal shows ads served by Google AdMob: full-screen ads between case openings, and optional rewarded ads that you choose to watch in exchange for an in-game bonus. Watching a rewarded ad is always your decision \u2014 nothing in the game is locked behind one.",
+              text: "Pixel Arsenal shows ads served by Google AdMob: full-screen ads between case openings, and optional rewarded ads that you choose to watch in exchange for an in-game bonus. Watching a rewarded ad is always your decision, and nothing in the game is locked behind one.",
             },
             {
               type: "paragraph",
@@ -274,7 +273,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Cloud save is optional and off until you sign in. When enabled, the encrypted save file is stored in your own Google Play Games saved-games space, under your Google account and subject to Google's privacy policy. NODIN Studio has no access to it. Signing out or playing offline changes nothing about the game itself \u2014 the local save always remains the source of truth.",
+              text: "Cloud save is optional and off until you sign in. When enabled, the encrypted save file is stored in your own Google Play Games saved-games space, under your Google account and subject to Google's privacy policy. NODIN Studio has no access to it. Signing out or playing offline changes nothing about the game itself, and the local save always remains the source of truth.",
             },
           ],
         },
@@ -331,13 +330,13 @@ const GAMES: readonly GameData[] = [
     name: "WBY",
     tagline: "Des questions qui créent de vraies conversations",
     description:
-      "Un jeu de cartes de questions profondes pour mieux se connaître. Chaque thème t'emmène dans un territoire différent — de l'introspection à la connexion, du deuil amoureux à la première rencontre.",
+      "Un jeu de cartes de questions profondes pour mieux se connaître. Chaque thème t'emmène dans un territoire différent, de l'introspection à la connexion, du deuil amoureux à la première rencontre.",
     features: [
-      "Thème Date — briser la glace autrement",
-      "Thème Couple — aller plus loin ensemble",
-      "Thème Famille — ce qu'on n'ose pas dire",
-      "Thème Breakup — faire le point",
-      "Thème Self-réflexion — se connaître soi-même",
+      "Thème Date : briser la glace autrement",
+      "Thème Couple : aller plus loin ensemble",
+      "Thème Famille : ce qu'on n'ose pas dire",
+      "Thème Breakup : faire le point",
+      "Thème Self-réflexion : se connaître soi-même",
     ],
     platforms: [
       {
@@ -376,7 +375,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "WBY collects no personal information whatsoever. No account is required. No name, email address, location, or device identifier is collected or sent to any server. Questions and answers exchanged during gameplay exist only between the players in the room — they are never recorded or transmitted.",
+              text: "WBY collects no personal information whatsoever. No account is required. No name, email address, location, or device identifier is collected or sent to any server. Questions and answers exchanged during gameplay exist only between the players in the room, and they are never recorded or transmitted.",
             },
           ],
         },

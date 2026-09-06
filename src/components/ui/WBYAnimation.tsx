@@ -57,7 +57,7 @@ export default function WBYAnimation({ className }: WBYAnimationProps) {
             strokeOpacity="0.35"
           />
 
-          {/* Question mark — drops in, holds, lifts off */}
+          {/* Question mark: drops in, holds, lifts off */}
           <text
             className="wby-q"
             x="90"

@@ -153,7 +153,7 @@ const COPY = {
     badge: "Jeu de géographie · Android",
     tagline: "Testez vos connaissances en géographie mondiale.",
     leadParagraph:
-      "Une vraie carte du monde, quatre façons de jouer. Place les pays, devine les drapeaux, les capitales et les devises -- puis traverse le globe par frontières terrestres dans le mode Voyage, ou explore les régions et villes de chaque pays sur la Carte Interactive.",
+      "Une vraie carte du monde, quatre façons de jouer. Place les pays, devine les drapeaux, les capitales et les devises, puis traverse le globe par frontières terrestres dans le mode Voyage, ou explore les régions et villes de chaque pays sur la Carte Interactive.",
     quizKicker: "Quatre modes de jeu",
     quizTitle: "Quatre angles, une même carte",
     premiumKicker: "Modes Premium",
@@ -163,7 +163,7 @@ const COPY = {
       "Choisis un pays de départ et une destination lointaine. Traverse les frontières pas à pas et essaie de trouver le chemin le plus court entre les deux.",
     exploreTitle: "Carte Interactive",
     exploreDesc:
-      "Tape n'importe quel pays pour zoomer dedans. Devine ses régions, états ou provinces -- puis ses plus grandes villes sur la silhouette du pays.",
+      "Tape n'importe quel pays pour zoomer dedans. Devine ses régions, états ou provinces, puis ses plus grandes villes sur la silhouette du pays.",
     dailyKicker: "Défi Quotidien",
     dailyTitle: "Un pays par jour. Quatre indices.",
     dailyDesc:
@@ -175,7 +175,7 @@ const COPY = {
     wondersKicker: "Sept Merveilles",
     wondersTitle: "Dépense tes pièces dans la collection",
     wondersDesc:
-      "Chaque Merveille débloque un bonus permanent dans le Défi Quotidien -- gels de série, multiplicateurs de pièces, vies supplémentaires, indices révélés à l'avance.",
+      "Chaque Merveille débloque un bonus permanent dans le Défi Quotidien : gels de série, multiplicateurs de pièces, vies supplémentaires, indices révélés à l'avance.",
     themesKicker: "Thèmes de carte",
     themesTitle: "11 styles. 7 à débloquer.",
     themesDesc:
@@ -191,7 +191,7 @@ const COPY = {
     badge: "Geography game · Android",
     tagline: "Test your world geography knowledge.",
     leadParagraph:
-      "A real world map, four ways to play. Place countries, recognize flags, capitals and currencies -- then cross the globe by land borders in Travel mode, or zoom into a country and explore its regions and cities on the Interactive Map.",
+      "A real world map, four ways to play. Place countries, recognize flags, capitals and currencies, then cross the globe by land borders in Travel mode, or zoom into a country and explore its regions and cities on the Interactive Map.",
     quizKicker: "Four game modes",
     quizTitle: "Four angles, one map",
     premiumKicker: "Premium modes",
@@ -201,7 +201,7 @@ const COPY = {
       "Pick a starting country and a far-away destination. Cross land borders step by step and try to find the shortest path between them.",
     exploreTitle: "Interactive Map",
     exploreDesc:
-      "Tap any country to zoom in. Guess its regions, states or provinces -- then its largest cities, plotted on the country silhouette.",
+      "Tap any country to zoom in. Guess its regions, states or provinces, then its largest cities, plotted on the country silhouette.",
     dailyKicker: "Daily Challenge",
     dailyTitle: "One country a day. Four clues.",
     dailyDesc:
@@ -213,7 +213,7 @@ const COPY = {
     wondersKicker: "Seven Wonders",
     wondersTitle: "Spend your coins on the collection",
     wondersDesc:
-      "Each Wonder unlocks a permanent bonus in the Daily Challenge -- streak freezes, coin multipliers, extra lives, clues revealed up-front.",
+      "Each Wonder unlocks a permanent bonus in the Daily Challenge : streak freezes, coin multipliers, extra lives, clues revealed up-front.",
     themesKicker: "Map themes",
     themesTitle: "11 styles. 7 to unlock.",
     themesDesc:
@@ -332,7 +332,7 @@ export default function GlobeTrotPage({ game, locale }: GlobeTrotPageProps) {
                 {desc}
               </p>
 
-              {/* Mock in-game prompt — like the app's question card */}
+              {/* Mock in-game prompt, like the app's question card */}
               <div
                 className="mt-6 rounded-xl border bg-[#F8FAFC] px-4 py-3 font-mono text-sm tracking-tight"
                 style={{ borderColor: `${color}33`, color }}

@@ -24,7 +24,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${game.name} -- NODIN Studio`,
+    title: `${game.name} | NODIN Studio`,
     description: game.tagline,
   };
 }

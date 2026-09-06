@@ -29,7 +29,7 @@ export default function GameCard({ game, locale }: GameCardProps) {
     >
       <Link
         href={`${prefix}${game.gamePath}`}
-        aria-label={`${game.name} -- ${t(locale, "game.learnMore")}`}
+        aria-label={`${game.name}, ${t(locale, "game.learnMore")}`}
         className="absolute inset-0 z-10"
       />
 

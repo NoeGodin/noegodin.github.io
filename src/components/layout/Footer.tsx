@@ -37,7 +37,7 @@ export default function Footer() {
                   href={`${prefix}${game.privacyPath}`}
                   className="transition-colors duration-200 hover:text-zinc-950"
                 >
-                  {game.name} — {t(locale, "game.privacy")}
+                  {game.name} · {t(locale, "game.privacy")}
                 </Link>
               </li>
             ))}
