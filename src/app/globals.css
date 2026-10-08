@@ -54,3 +54,50 @@ body {
   color: #09090b;
 }
 
+
+/* ── Pixel Arsenal ────────────────────────────────────────────────────
+   Le bouton du jeu s'enfonce de sa propre ombre au clic ; les tuiles se
+   soulevent au survol. Rien ne bouge si l'utilisateur coupe le mouvement. */
+.pa-press {
+  transition: transform 120ms steps(2), box-shadow 120ms steps(2);
+}
+.pa-press:hover {
+  transform: translateY(-2px);
+}
+.pa-press:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #e8b866 !important;
+}
+.pa-lift {
+  transition: transform 160ms ease-out, border-color 160ms ease-out;
+}
+.pa-lift:hover {
+  transform: translateY(-4px);
+  border-color: #e8b866 !important;
+}
+.pa-press:focus-visible,
+.pa-lift:focus-visible,
+.pa-link:focus-visible {
+  outline: 2px solid #ffd75e;
+  outline-offset: 3px;
+}
+.pa-rail {
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+.pa-rail::-webkit-scrollbar {
+  display: none;
+}
+@keyframes pa-float {
+  0%, 100% { transform: translateY(0) rotate(var(--pa-tilt, 0deg)); }
+  50% { transform: translateY(-8px) rotate(var(--pa-tilt, 0deg)); }
+}
+.pa-float {
+  animation: pa-float 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pa-press, .pa-lift { transition: none; }
+  .pa-press:hover, .pa-lift:hover, .pa-press:active { transform: none; }
+  .pa-float { animation: none; }
+}

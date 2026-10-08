@@ -1,3 +1,8 @@
+import type { LegalDocument } from "./legal/types";
+import { PIXEL_ARSENAL_TERMS } from "./legal/pixelArsenalTerms";
+import { PIXEL_ARSENAL_SUPPORT } from "./legal/pixelArsenalSupport";
+import { STUDIO_EMAIL } from "./studio";
+
 interface GameTheme {
   readonly accent: string;
   readonly accentDim: string;
@@ -27,33 +32,23 @@ interface GameData {
   /** Icône carrée, utilisée comme visuel quand le jeu n'a pas d'animation dédiée. */
   readonly iconImage?: string;
   readonly theme?: GameTheme;
-  readonly privacyPolicy?: PrivacyPolicy;
+  readonly privacyPolicy?: LegalDocument;
+  /** Conditions d'utilisation, servies sous /terms/<slug>. */
+  readonly terms?: LocalizedDocuments;
+  /** Page support (URL de support des fiches store), sous /support/<slug>. */
+  readonly support?: LocalizedDocuments;
 }
 
 interface Platform {
   readonly name: string;
   readonly label: string;
+  /** Vide tant que la fiche n'est pas en ligne : affiché « bientôt ». */
   readonly url: string;
 }
 
-type PrivacyBlock =
-  | {
-      readonly type: "paragraph";
-      readonly text: string;
-    }
-  | {
-      readonly type: "list";
-      readonly items: readonly string[];
-    };
-
-interface PrivacyPolicySection {
-  readonly title: string;
-  readonly blocks: readonly PrivacyBlock[];
-}
-
-interface PrivacyPolicy {
-  readonly lastUpdated: string;
-  readonly sections: readonly PrivacyPolicySection[];
+interface LocalizedDocuments {
+  readonly fr: LegalDocument;
+  readonly en: LegalDocument;
 }
 
 const GAMES: readonly GameData[] = [
@@ -166,18 +161,23 @@ const GAMES: readonly GameData[] = [
     description:
       "Pixel Arsenal est un jeu d'ouverture de caisses en pixel art. Ouvre, garde ce qui te plaît, revends le reste. Améliore tes armes préférées, fusionne tes doublons, remplis ta collection et tente les tables du casino. Monnaie du jeu uniquement : rien ne s'encaisse.",
     features: [
-      "Douze caisses à débloquer",
+      "Seize caisses, de la Standard à la Supernova",
       "Une caisse gratuite chaque jour",
       "Collection d'armes à compléter",
-      "Upgrader, contrat et fusion",
-      "Casino : mines, plinko, crash, jackpot",
-      "Farm hors ligne",
+      "Upgrader, contrat, fusion et lapidaire",
+      "Huit tables de casino, monnaie du jeu uniquement",
+      "Campagne, arène et farm hors ligne",
     ],
     platforms: [
       {
         name: "android",
         label: "Google Play",
-        url: "#",
+        url: "https://play.google.com/store/apps/details?id=com.nodinstudio.pixelarsenal",
+      },
+      {
+        name: "ios",
+        label: "App Store",
+        url: "",
       },
     ],
     status: "released",
@@ -185,15 +185,17 @@ const GAMES: readonly GameData[] = [
     gamePath: "/games/pixel-arsenal",
     presentationImage: "/games/pixel_arsenal_presentation.png",
     presentationFit: "contain",
-    presentationBackground: "#12101A",
+    presentationBackground: "#1A1C21",
     iconImage: "/games/pixel-arsenal/icon.png",
     theme: {
       accent: "#D69A1E",
       accentDim: "#FCF3DC",
       accentInk: "#4A3505",
     },
+    terms: PIXEL_ARSENAL_TERMS,
+    support: PIXEL_ARSENAL_SUPPORT,
     privacyPolicy: {
-      lastUpdated: "September 2026",
+      lastUpdated: "October 8, 2026",
       sections: [
         {
           title: "Overview",
@@ -226,11 +228,12 @@ const GAMES: readonly GameData[] = [
                 "Virtual balance, diamonds, player power and prestige level.",
                 "Weapon inventory: rarity, wear, upgrade level, fusion stars and equipped skin of each item.",
                 "Progression: cases opened, collection milestones claimed, AFK farm state, purchases made.",
+                "A random game identifier, also shown in the settings as your player ID. It identifies your save, never you, and is only sent to us if you choose to email support.",
               ],
             },
             {
               type: "paragraph",
-              text: "Uninstalling the app deletes this file. If you enabled cloud save, a copy remains in your own Google Play Games storage until you delete it there.",
+              text: "Uninstalling the app deletes this file. If you enabled cloud save, a copy remains in your own Google Play Games or Game Center storage until you delete it there.",
             },
           ],
         },
@@ -247,7 +250,7 @@ const GAMES: readonly GameData[] = [
             },
             {
               type: "paragraph",
-              text: "In the European Economic Area, the United Kingdom and Switzerland, a consent form is shown before any personalised ad is requested, through Google's User Messaging Platform. You can reopen it at any time from the in-game settings to change or withdraw your choice. You can also reset or delete your advertising identifier in your device's Android settings.",
+              text: "In the European Economic Area, the United Kingdom and Switzerland, a consent form is shown before any personalised ad is requested, through Google's User Messaging Platform. You can reopen it at any time from the in-game settings to change or withdraw your choice. You can also reset or delete your advertising identifier in your device settings. On iPhone, the game does not ask for tracking permission (App Tracking Transparency), so the advertising identifier is not shared and ads are not personalised across apps.",
             },
             {
               type: "paragraph",
@@ -269,11 +272,11 @@ const GAMES: readonly GameData[] = [
           ],
         },
         {
-          title: "Cloud Save (Google Play Games Services)",
+          title: "Cloud Save (Google Play Games, Game Center)",
           blocks: [
             {
               type: "paragraph",
-              text: "Cloud save is optional and off until you sign in. When enabled, the encrypted save file is stored in your own Google Play Games saved-games space, under your Google account and subject to Google's privacy policy. NODIN Studio has no access to it. Signing out or playing offline changes nothing about the game itself, and the local save always remains the source of truth.",
+              text: "Cloud save is optional and off until you sign in. When enabled, the encrypted save file is stored in your own saved-games space: Google Play Games on Android, under your Google account, or Game Center on iPhone, under your Apple Account. Each is subject to its provider's privacy policy. NODIN Studio has no access to it. Signing out or playing offline changes nothing about the game itself.",
             },
           ],
         },
@@ -300,7 +303,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Arsenal features simulated gambling themes, in-app purchases and advertising. It is intended for a mature audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
+              text: "Pixel Arsenal features simulated gambling themes, in-app purchases and advertising. It is intended for adults (18 and over) and is not directed at children. We do not knowingly collect personal information from children.",
             },
           ],
         },
@@ -309,7 +312,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Because we hold no personal data about you, there is nothing on our side to access, correct or delete. To act on data held by the services above, use their own controls: Google Play Games saved games for your cloud save, your device's Android ad settings and the in-game consent form for advertising, and your Google Play or App Store account for purchases. For anything else, contact NODIN Studio through the address listed in the site footer.",
+              text: `Because we hold no personal data about you, there is nothing on our side to access, correct or delete. To act on data held by the services above, use their own controls: Google Play Games saved games for your cloud save, your device's Android ad settings and the in-game consent form for advertising, and your Google Play or App Store account for purchases. For anything else, contact NODIN Studio at ${STUDIO_EMAIL}. If you email us, we use your address and message only to answer you, and delete the thread once the request is closed.`,
             },
           ],
         },

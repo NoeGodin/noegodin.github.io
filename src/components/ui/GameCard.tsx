@@ -106,16 +106,26 @@ export default function GameCard({ game, locale }: GameCardProps) {
               {game.description}
             </p>
             <div className="flex flex-wrap gap-2.5">
-              {game.platforms.map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.url}
-                  className="relative z-20 inline-flex items-center gap-2 rounded-full border border-zinc-950/15 bg-white px-4 py-2 text-xs font-semibold text-zinc-800 shadow-[0_1px_0_rgba(9,9,11,0.04)] transition-all duration-200 hover:bg-zinc-950 hover:text-white"
-                >
-                  {platform.name === "ios" ? <AppleIcon /> : <PlayIcon />}
-                  {platform.label}
-                </a>
-              ))}
+              {game.platforms.map((platform) =>
+                platform.url ? (
+                  <a
+                    key={platform.name}
+                    href={platform.url}
+                    className="relative z-20 inline-flex items-center gap-2 rounded-full border border-zinc-950/15 bg-white px-4 py-2 text-xs font-semibold text-zinc-800 shadow-[0_1px_0_rgba(9,9,11,0.04)] transition-all duration-200 hover:bg-zinc-950 hover:text-white"
+                  >
+                    {platform.name === "ios" ? <AppleIcon /> : <PlayIcon />}
+                    {platform.label}
+                  </a>
+                ) : (
+                  <span
+                    key={platform.name}
+                    className="relative z-20 inline-flex items-center gap-2 rounded-full border border-dashed border-zinc-950/20 px-4 py-2 text-xs font-semibold text-zinc-400"
+                  >
+                    {platform.name === "ios" ? <AppleIcon /> : <PlayIcon />}
+                    {platform.label} · {t(locale, "game.comingSoon")}
+                  </span>
+                ),
+              )}
             </div>
           </div>
 

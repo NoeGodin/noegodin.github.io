@@ -4,6 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getAllGames } from "../../lib/games";
 import { t, type Locale } from "../../i18n/messages";
+import { STUDIO_EMAIL } from "../../lib/studio";
+import { legalPath, type LegalKind } from "../legal/LegalDocumentPage";
+
+const LEGAL_KINDS: readonly LegalKind[] = ["privacy", "terms", "support"];
+const LEGAL_LABELS: Record<Locale, Record<LegalKind, string>> = {
+  fr: { privacy: "Confidentialité", terms: "CGU", support: "Support" },
+  en: { privacy: "Privacy", terms: "Terms", support: "Support" },
+};
 
 export default function Footer() {
   const games = getAllGames();
@@ -30,18 +38,36 @@ export default function Footer() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-950">
             {t(locale, "footer.policies")}
           </p>
-          <ul className="space-y-2 text-sm text-zinc-600">
+          <ul className="space-y-3 text-sm text-zinc-600">
             {games.map((game) => (
               <li key={game.slug}>
-                <Link
-                  href={`${prefix}${game.privacyPath}`}
-                  className="transition-colors duration-200 hover:text-zinc-950"
-                >
-                  {game.name} · {t(locale, "game.privacy")}
-                </Link>
+                <span className="mb-1 block text-zinc-950">{game.name}</span>
+                <span className="flex flex-wrap gap-x-4 gap-y-1">
+                  {LEGAL_KINDS.map((kind) => {
+                    const path = legalPath(game, kind);
+                    return path ? (
+                      <Link
+                        key={kind}
+                        href={`${prefix}${path}`}
+                        className="transition-colors duration-200 hover:text-zinc-950"
+                      >
+                        {LEGAL_LABELS[locale][kind]}
+                      </Link>
+                    ) : null;
+                  })}
+                </span>
               </li>
             ))}
           </ul>
+          <p className="mt-8 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-950">
+            {t(locale, "footer.contact")}
+          </p>
+          <a
+            href={`mailto:${STUDIO_EMAIL}`}
+            className="text-sm text-zinc-600 transition-colors duration-200 hover:text-zinc-950"
+          >
+            {STUDIO_EMAIL}
+          </a>
         </div>
       </div>
 
