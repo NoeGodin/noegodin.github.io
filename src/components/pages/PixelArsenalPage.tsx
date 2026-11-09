@@ -8,7 +8,7 @@ import {
   ADVENTURE,
   BASE,
   CASES,
-  CASINO,
+  CHALLENGES,
   COPY,
   INK,
   RARITY,
@@ -47,7 +47,7 @@ export default function PixelArsenalPage({ game, locale }: PixelArsenalPageProps
       <Hero game={game} locale={locale} c={c} prefix={prefix} />
       <ScreenRail locale={locale} c={c} />
       <CasesSection c={c} />
-      <CasinoSection locale={locale} c={c} />
+      <ChallengesSection locale={locale} c={c} />
       <CollectionSection locale={locale} c={c} />
       <FeatureSection
         kicker={c.inventoryKicker}
@@ -248,16 +248,16 @@ function CasesSection({ c }: { c: Copy }) {
   );
 }
 
-/* ── 02 Casino ─────────────────────────────────────────────────────── */
-function CasinoSection({ locale, c }: { locale: "fr" | "en"; c: Copy }) {
+/* ── 02 Mini-jeux ──────────────────────────────────────────────────── */
+function ChallengesSection({ locale, c }: { locale: "fr" | "en"; c: Copy }) {
   return (
     <Section>
-      <Kicker>{c.casinoKicker}</Kicker>
-      <SectionTitle>{c.casinoTitle}</SectionTitle>
-      <Lede>{c.casinoLede}</Lede>
+      <Kicker>{c.challengesKicker}</Kicker>
+      <SectionTitle>{c.challengesTitle}</SectionTitle>
+      <Lede>{c.challengesLede}</Lede>
 
       <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {CASINO.map((mode) => (
+        {CHALLENGES.map((mode) => (
           <li key={mode.icon}>
             <Plate className="pa-lift flex flex-col items-center gap-3 p-4 sm:p-6">
               <Sprite src={`${BASE}/modes/${mode.icon}.png`} alt="" size={56} />

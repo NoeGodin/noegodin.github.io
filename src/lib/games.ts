@@ -78,14 +78,14 @@ const GAMES: readonly GameData[] = [
     gamePath: "/games/globetrot",
     presentationImage: "/games/globetrot_presentation.png",
     privacyPolicy: {
-      lastUpdated: "April 2026",
+      lastUpdated: "October 2026",
       sections: [
         {
           title: "Overview",
           blocks: [
             {
               type: "paragraph",
-              text: "GlobeTrot is a geography quiz game developed by NODIN Studio. This policy describes what data the app collects, how it is used, and your choices regarding that data.",
+              text: "GlobeTrot is a geography quiz game developed by NODIN Studio for players of all ages, including children. This policy describes what data the app collects, how it is used, and your choices regarding that data.",
             },
           ],
         },
@@ -116,11 +116,46 @@ const GAMES: readonly GameData[] = [
           ],
         },
         {
+          title: "Advertising (Google AdMob)",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "The free version of GlobeTrot shows ads served by Google AdMob. Because the game is intended for all ages, every ad request is tagged as child-directed: ads are never personalised, are limited to content suitable for all audiences (rating G), and the app does not access the device's advertising ID.",
+            },
+            {
+              type: "paragraph",
+              text: "To deliver ads, measure them and prevent fraud, AdMob receives the following from your device:",
+            },
+            {
+              type: "list",
+              items: [
+                "Your IP address, from which an approximate location may be derived (never your precise location).",
+                "Device or app identifiers other than the advertising ID.",
+                "Interactions with ads (views and taps).",
+                "Diagnostic data such as crash logs and performance information.",
+              ],
+            },
+            {
+              type: "paragraph",
+              text: "This data is processed by Google under its own policy: https://policies.google.com/technologies/ads. Buying \"No Ads\" or Premium removes banner and interstitial ads.",
+            },
+          ],
+        },
+        {
+          title: "In-App Purchases (RevenueCat)",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "Purchases are made through Google Play or the App Store; we never see your payment details. To unlock and restore what you bought, the app uses RevenueCat, which receives an anonymous app user ID generated on your device and your purchase history for GlobeTrot. RevenueCat acts as our service provider: https://www.revenuecat.com/privacy.",
+            },
+          ],
+        },
+        {
           title: "Third-Party Data Sharing",
           blocks: [
             {
               type: "paragraph",
-              text: "We do not sell your personal data. Game data synced through Apple Game Center or Google Play Games is governed by the respective platform policies.",
+              text: "We do not sell your personal data. Data is shared only with the services listed above (Google AdMob, RevenueCat, and Apple or Google for cloud saves), for the purposes described. All data leaving your device is encrypted in transit.",
             },
           ],
         },
@@ -138,7 +173,11 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "GlobeTrot does not knowingly collect personal information from children under 13. The app does not require personal data to function.",
+              text: "GlobeTrot is designed for all ages, including children, and complies with the Google Play Families Policy. We never ask for a name, email address, photo or precise location. Ads are child-directed and non-personalised as described above, and the advertising ID is not accessed.",
+            },
+            {
+              type: "paragraph",
+              text: "Because the app has no account, we hold no personal data that could be deleted on request. A parent or guardian with any question can contact us at nodinstudio@gmail.com.",
             },
           ],
         },
@@ -157,15 +196,15 @@ const GAMES: readonly GameData[] = [
   {
     slug: "pixel-arsenal",
     name: "Pixel Arsenal",
-    tagline: "Ouvre des caisses, monte ton arsenal, tente ta chance",
+    tagline: "Ouvre des caisses, monte ton arsenal, relève les défis",
     description:
-      "Pixel Arsenal est un jeu d'ouverture de caisses en pixel art. Ouvre, garde ce qui te plaît, revends le reste. Améliore tes armes préférées, fusionne tes doublons, remplis ta collection et tente les tables du casino. Monnaie du jeu uniquement : rien ne s'encaisse.",
+      "Pixel Arsenal est un jeu d'ouverture de caisses en pixel art. Ouvre, garde ce qui te plaît, revends le reste. Améliore tes armes préférées, fusionne tes doublons, remplis ta collection et relève sept mini-jeux. Monnaie du jeu uniquement : rien ne s'encaisse.",
     features: [
       "Seize caisses, de la Standard à la Supernova",
       "Une caisse gratuite chaque jour",
       "Collection d'armes à compléter",
-      "Upgrader, contrat, fusion et lapidaire",
-      "Huit tables de casino, monnaie du jeu uniquement",
+      "Autel, contrat, fusion et lapidaire",
+      "Sept mini-jeux : defuse, tour, pont, missile...",
       "Campagne, arène et farm hors ligne",
     ],
     platforms: [
@@ -195,7 +234,7 @@ const GAMES: readonly GameData[] = [
     terms: PIXEL_ARSENAL_TERMS,
     support: PIXEL_ARSENAL_SUPPORT,
     privacyPolicy: {
-      lastUpdated: "October 8, 2026",
+      lastUpdated: "November 9, 2026",
       sections: [
         {
           title: "Overview",
@@ -290,11 +329,11 @@ const GAMES: readonly GameData[] = [
           ],
         },
         {
-          title: "Simulated Gambling, Virtual Currency Only",
+          title: "Loot Boxes, Virtual Currency Only",
           blocks: [
             {
               type: "paragraph",
-              text: "Case openings and casino modes are simulations played with in-game currency that has no monetary value. In-game currency and items cannot be cashed out, traded or exchanged for anything of real-world value, and no purchase gives an opportunity to win real money or prizes. The game is entertainment, not gambling.",
+              text: "Case openings (loot boxes) and mini-games are played with in-game currency that has no monetary value. In-game currency and items cannot be cashed out, traded or exchanged for anything of real-world value, and no purchase gives an opportunity to win real money or prizes. The odds of every case are shown in the game before opening.",
             },
           ],
         },
@@ -303,7 +342,7 @@ const GAMES: readonly GameData[] = [
           blocks: [
             {
               type: "paragraph",
-              text: "Pixel Arsenal features simulated gambling themes, in-app purchases and advertising. It is intended for adults (18 and over) and is not directed at children. We do not knowingly collect personal information from children.",
+              text: "Pixel Arsenal contains loot boxes, in-app purchases and advertising. It is intended for players aged 13 and over and is not directed at children under 13. We do not knowingly collect personal information from children under 13.",
             },
           ],
         },

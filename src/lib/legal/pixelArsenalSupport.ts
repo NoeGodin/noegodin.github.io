@@ -2,12 +2,12 @@ import type { LegalDocument } from "./types";
 import { STUDIO_EMAIL } from "../studio";
 
 /* Page support de Pixel Arsenal : c'est l'URL de support des fiches Play et
-   App Store. Les libelles cites ici (REGLAGES, SUPPORT, ID joueur...) sont
+   App Store. Les libelles cites ici (REGLAGES, AIDE, ID joueur...) sont
    ceux du jeu : un joueur doit retrouver a l'ecran exactement ce qu'il lit. */
 
 const fr: LegalDocument = {
-  lastUpdated: "8 octobre 2026",
-  intro: `Un souci avec un achat, une sauvegarde ou le jeu ? Écris à ${STUDIO_EMAIL}. Le plus rapide : le bouton CONTACTER LE SUPPORT du jeu, qui prépare le mail avec ton ID joueur.`,
+  lastUpdated: "9 novembre 2026",
+  intro: `Un souci avec un achat, une sauvegarde ou le jeu ? Écris à ${STUDIO_EMAIL}. Le plus rapide : le bouton NOUS ÉCRIRE de l'écran AIDE du jeu, qui prépare le mail avec ton ID joueur.`,
   sections: [
     {
       title: "Trouver ton ID joueur",
@@ -16,8 +16,8 @@ const fr: LegalDocument = {
           type: "list",
           items: [
             "Ouvre RÉGLAGES (l'engrenage en haut de l'écran).",
-            "Section SUPPORT : ton ID joueur s'affiche au format XXXX-XXXX.",
-            "Touche COPIER, ou CONTACTER LE SUPPORT pour l'envoyer directement.",
+            "Section INFOS, touche AIDE : ton ID joueur s'affiche au format XXXX-XXXX.",
+            "Touche COPIER, ou NOUS ÉCRIRE pour l'envoyer directement.",
           ],
         },
         {
@@ -52,7 +52,7 @@ const fr: LegalDocument = {
         },
         {
           type: "paragraph",
-          text: "Après vérification, on peut t'envoyer un code de support. Saisis-le dans RÉGLAGES, section SUPPORT, puis VALIDER. Il ne fonctionne que sur la partie dont tu nous as donné l'ID, et une seule fois. C'est un geste commercial, pas un dû.",
+          text: "Après vérification, on peut t'envoyer un code de support. Copie-le en entier depuis le mail, puis dans RÉGLAGES > INFOS > AIDE, touche COLLER. Il ne fonctionne que sur la partie dont tu nous as donné l'ID, et une seule fois. C'est un geste commercial, pas un dû.",
         },
       ],
     },
@@ -81,7 +81,7 @@ const fr: LegalDocument = {
           type: "list",
           items: [
             "Lire ou modifier ta partie : elle n'existe que sur ton appareil et dans ton espace cloud.",
-            "Rendre des dollars, des armes ou des objets perdus au casino ou en jeu.",
+            "Rendre des dollars, des armes ou des objets perdus dans un mini-jeu ou en jeu.",
             "Transférer une partie ou des objets d'un joueur à un autre.",
           ],
         },
@@ -91,8 +91,8 @@ const fr: LegalDocument = {
 };
 
 const en: LegalDocument = {
-  lastUpdated: "October 8, 2026",
-  intro: `A problem with a purchase, a save or the game? Write to ${STUDIO_EMAIL}. The fastest way: the in-game CONTACT SUPPORT button, which drafts the mail with your player ID.`,
+  lastUpdated: "November 9, 2026",
+  intro: `A problem with a purchase, a save or the game? Write to ${STUDIO_EMAIL}. The fastest way: the CONTACT US button of the in-game HELP screen, which drafts the mail with your player ID.`,
   sections: [
     {
       title: "Find your player ID",
@@ -101,8 +101,8 @@ const en: LegalDocument = {
           type: "list",
           items: [
             "Open SETTINGS (the gear at the top of the screen).",
-            "SUPPORT section: your player ID shows as XXXX-XXXX.",
-            "Tap COPY, or CONTACT SUPPORT to send it directly.",
+            "ABOUT section, tap HELP: your player ID shows as XXXX-XXXX.",
+            "Tap COPY, or CONTACT US to send it directly.",
           ],
         },
         {
@@ -137,7 +137,7 @@ const en: LegalDocument = {
         },
         {
           type: "paragraph",
-          text: "After checking, we may send you a support code. Enter it in SETTINGS, SUPPORT section, then APPLY. It only works on the game whose ID you gave us, and only once. It is a goodwill gesture, not an entitlement.",
+          text: "After checking, we may send you a support code. Copy it whole from the mail, then in SETTINGS > ABOUT > HELP, tap PASTE. It only works on the game whose ID you gave us, and only once. It is a goodwill gesture, not an entitlement.",
         },
       ],
     },
@@ -166,7 +166,7 @@ const en: LegalDocument = {
           type: "list",
           items: [
             "Read or edit your game: it only exists on your device and in your cloud space.",
-            "Give back dollars, weapons or items lost in the casino or in play.",
+            "Give back dollars, weapons or items lost in a mini-game or in play.",
             "Move a game or items from one player to another.",
           ],
         },

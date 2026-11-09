@@ -6,7 +6,7 @@ import { STUDIO_EMAIL } from "../studio";
    traduction. Toute modification se reporte dans les deux. */
 
 const fr: LegalDocument = {
-  lastUpdated: "8 octobre 2026",
+  lastUpdated: "9 novembre 2026",
   intro:
     "Ces conditions encadrent l'utilisation du jeu Pixel Arsenal et de sa boutique. En installant ou en utilisant le jeu, tu les acceptes.",
   sections: [
@@ -24,7 +24,7 @@ const fr: LegalDocument = {
       blocks: [
         {
           type: "paragraph",
-          text: "Pixel Arsenal contient des jeux de hasard simulés (ouverture de caisses, casino) et des achats intégrés. Il est destiné aux personnes majeures (18 ans et plus). Si tu es mineur, n'utilise pas le jeu ni sa boutique.",
+          text: "Pixel Arsenal contient des lootboxes (ouverture de caisses), des mini-jeux et des achats intégrés. Il est destiné aux joueurs de 13 ans et plus. Si tu as moins de 13 ans, n'utilise pas le jeu. Si tu as moins de 18 ans, demande l'accord d'un parent ou tuteur avant tout achat.",
         },
       ],
     },
@@ -34,7 +34,7 @@ const fr: LegalDocument = {
         {
           type: "list",
           items: [
-            "Les caisses et les tables du casino se jouent uniquement avec la monnaie du jeu.",
+            "Les caisses et les mini-jeux se jouent uniquement avec la monnaie du jeu.",
             "Rien de ce qui se gagne dans le jeu ne peut être encaissé, revendu, échangé entre joueurs ou converti en argent ou en bien réel.",
             "Les probabilités de chaque caisse sont affichées dans le jeu avant l'ouverture.",
             "Aucun achat ne donne la possibilité de gagner de l'argent ou un lot réel.",
@@ -142,7 +142,7 @@ const fr: LegalDocument = {
 };
 
 const en: LegalDocument = {
-  lastUpdated: "October 8, 2026",
+  lastUpdated: "November 9, 2026",
   intro:
     "These terms govern the use of Pixel Arsenal and its store. By installing or using the game, you accept them. The French version prevails.",
   sections: [
@@ -160,7 +160,7 @@ const en: LegalDocument = {
       blocks: [
         {
           type: "paragraph",
-          text: "Pixel Arsenal contains simulated gambling (case opening, casino) and in-app purchases. It is intended for adults (18 and over). If you are a minor, do not use the game or its store.",
+          text: "Pixel Arsenal contains loot boxes (case opening), mini-games and in-app purchases. It is intended for players aged 13 and over. If you are under 13, do not use the game. If you are under 18, ask a parent or guardian before making any purchase.",
         },
       ],
     },
@@ -170,7 +170,7 @@ const en: LegalDocument = {
         {
           type: "list",
           items: [
-            "Cases and casino tables are played with in-game currency only.",
+            "Cases and mini-games are played with in-game currency only.",
             "Nothing earned in the game can be cashed out, resold, traded between players or converted into money or real goods.",
             "The odds of every case are shown in the game before opening.",
             "No purchase gives a chance to win money or a real prize.",

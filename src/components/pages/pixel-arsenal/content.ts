@@ -70,15 +70,15 @@ export const CASES: ReadonlyArray<{ file: string; name: string }> = [
   { file: "case_supernova", name: "Supernova" },
 ];
 
-export const CASINO = [
-  { icon: "mode_mines", fr: "Mines", en: "Mines" },
-  { icon: "mode_plinko", fr: "Plinko", en: "Plinko" },
-  { icon: "mode_crash", fr: "Crash", en: "Crash" },
+/** Mini-jeux du jeu, noms affiches en jeu (i18n/translations.csv, BTN_*). */
+export const CHALLENGES = [
+  { icon: "mode_defuse", fr: "Defuse", en: "Defuse" },
+  { icon: "mode_missile", fr: "Missile", en: "Missile" },
+  { icon: "mode_lootbox", fr: "Lootbox", en: "Lootbox" },
+  { icon: "mode_airdrop", fr: "Largage", en: "Airdrop" },
   { icon: "mode_jackpot", fr: "Jackpot", en: "Jackpot" },
-  { icon: "mode_roulette", fr: "Roulette", en: "Roulette" },
-  { icon: "mode_blackjack", fr: "Blackjack", en: "Blackjack" },
-  { icon: "mode_poker", fr: "Poker", en: "Poker" },
-  { icon: "mode_slots", fr: "Machine", en: "Slots" },
+  { icon: "mode_tower", fr: "La Tour", en: "Tower" },
+  { icon: "mode_bridge", fr: "Le Pont", en: "The Bridge" },
 ] as const;
 
 interface Feature {
@@ -90,8 +90,8 @@ interface Feature {
 export const WORKBENCH: readonly Feature[] = [
   {
     icon: "mode_upgrade",
-    fr: { title: "Upgrader", desc: "Mise une arme, tente d'en sortir une meilleure." },
-    en: { title: "Upgrader", desc: "Stake a weapon, try to walk away with a better one." },
+    fr: { title: "Autel", desc: "Offre une arme, tente d'en sortir une meilleure." },
+    en: { title: "Altar", desc: "Offer up a weapon, try to walk away with a better one." },
   },
   {
     icon: "mode_contract",
@@ -129,8 +129,8 @@ export const ADVENTURE: readonly Feature[] = [
   },
   {
     icon: "mode_garden",
-    fr: { title: "Jardin", desc: "Les tables du casino lâchent des œufs. Fais-les éclore." },
-    en: { title: "Garden", desc: "Casino tables drop eggs. Hatch them." },
+    fr: { title: "Jardin", desc: "Les mini-jeux lâchent des œufs. Fais-les éclore." },
+    en: { title: "Garden", desc: "Mini-games drop eggs. Hatch them." },
   },
 ];
 
@@ -139,7 +139,7 @@ export const SCREENS = [
   "01_ouverture",
   "02_revelation",
   "03_inventaire",
-  "04_casino",
+  "04_minijeux",
   "05_farm",
   "06_accueil",
 ] as const;
@@ -147,8 +147,8 @@ export const SCREENS = [
 export const COPY = {
   fr: {
     back: "Retour à l'accueil",
-    lede: "Ouvre des caisses, décroche des armes rares, monte ton arsenal. Seize caisses, huit tables de casino, une campagne et une arène.",
-    rating: "18+ · Hasard simulé, monnaie du jeu uniquement",
+    lede: "Ouvre des caisses, décroche des armes rares, monte ton arsenal. Seize caisses, sept mini-jeux, une campagne et une arène.",
+    rating: "13+ · Lootboxes, monnaie du jeu uniquement",
     soon: "Bientôt",
     screensAlt: "Capture du jeu",
     screensHint: "Fais défiler",
@@ -159,10 +159,10 @@ export const COPY = {
       "Seize caisses, de la Standard gratuite à la Supernova. Chaque palier débloque la suivante, et les probabilités de chacune sont affichées avant d'ouvrir.",
     casesChips: ["Une caisse gratuite chaque jour", "Ouverture multiple", "Probabilités affichées"],
 
-    casinoKicker: "02 / Casino",
-    casinoTitle: "Tente ta chance",
-    casinoLede:
-      "Huit tables pour faire grossir ton magot, ou tout perdre. Monnaie du jeu uniquement : rien ne s'encaisse, rien ne s'échange.",
+    challengesKicker: "02 / Mini-jeux",
+    challengesTitle: "Relève les défis",
+    challengesLede:
+      "Désamorce la bombe, grimpe la tour, traverse le pont. Sept mini-jeux pour faire grossir ton magot, en monnaie du jeu uniquement : rien ne s'encaisse, rien ne s'échange.",
 
     collectionKicker: "03 / Collection",
     collectionTitle: "Attrape les toutes",
@@ -181,7 +181,7 @@ export const COPY = {
     supportKicker: "Support",
     supportTitle: "Un souci ? On est la",
     supportLede:
-      "Ton ID joueur est dans Réglages, section Support. Le bouton Contacter le support l'envoie avec ta question.",
+      "Ton ID joueur est dans Réglages, Infos, Aide. Le bouton Nous écrire l'envoie avec ta question.",
     supportLinks: { support: "Aide et achats", terms: "Conditions d'utilisation", privacy: "Confidentialité" },
 
     ctaTitle: "Ouvre. Fusionne. Recommence.",
@@ -189,8 +189,8 @@ export const COPY = {
   },
   en: {
     back: "Back to home",
-    lede: "Open cases, land rare guns, build your arsenal. Sixteen cases, eight casino tables, a campaign and an arena.",
-    rating: "18+ · Simulated chance, in-game currency only",
+    lede: "Open cases, land rare guns, build your arsenal. Sixteen cases, seven mini-games, a campaign and an arena.",
+    rating: "13+ · Loot boxes, in-game currency only",
     soon: "Coming soon",
     screensAlt: "Game screenshot",
     screensHint: "Scroll",
@@ -201,10 +201,10 @@ export const COPY = {
       "Sixteen cases, from the free Standard to the Supernova. Each tier unlocks the next, and every case shows its odds before you open it.",
     casesChips: ["A free case every day", "Multi-open", "Odds on display"],
 
-    casinoKicker: "02 / Casino",
-    casinoTitle: "Push your luck",
-    casinoLede:
-      "Eight tables to grow your stack, or lose it all. In-game currency only: nothing cashes out, nothing trades.",
+    challengesKicker: "02 / Mini-games",
+    challengesTitle: "Take on the challenges",
+    challengesLede:
+      "Defuse the bomb, climb the tower, cross the bridge. Seven mini-games to grow your stack, in-game currency only: nothing cashes out, nothing trades.",
 
     collectionKicker: "03 / Collection",
     collectionTitle: "Catch them all",
@@ -223,7 +223,7 @@ export const COPY = {
     supportKicker: "Support",
     supportTitle: "Need help? We are here",
     supportLede:
-      "Your player ID is in Settings, Support section. The Contact support button sends it along with your question.",
+      "Your player ID is in Settings, About, Help. The Contact us button sends it along with your question.",
     supportLinks: { support: "Help and purchases", terms: "Terms of use", privacy: "Privacy" },
 
     ctaTitle: "Open. Fuse. Repeat.",
